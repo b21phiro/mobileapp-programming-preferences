@@ -11,8 +11,6 @@ import android.widget.EditText;
 
 public class SharedActivity extends AppCompatActivity {
 
-    private SharedPreferences pref;
-    private SharedPreferences.Editor editor;
     private EditText edit;
     private Button button;
 
@@ -29,8 +27,8 @@ public class SharedActivity extends AppCompatActivity {
     }
 
     public void save(String data) {
-        pref = getSharedPreferences("com.example.preferences.SAVED_INPUT", Context.MODE_PRIVATE);
-        editor = pref.edit();
+        SharedPreferences pref = getSharedPreferences("com.example.preferences.SAVED_INPUT", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
         editor.putString("input", data);
         editor.apply();
     }
