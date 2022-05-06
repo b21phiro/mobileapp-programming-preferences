@@ -45,4 +45,4 @@ protected void onResume() {
 }
 ```
 
-[!bild.gif](bild.gif)
+![bild.gif](bild.gif)
