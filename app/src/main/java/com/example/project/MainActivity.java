@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         Button button = findViewById(R.id.activityButton);
         button.setOnClickListener(view -> {
-            
+            startActivity(new Intent(MainActivity.this, SharedActivity.class));
         });
         setSupportActionBar(toolbar);
     }
